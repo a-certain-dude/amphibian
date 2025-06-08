@@ -7,7 +7,7 @@ interface AmphibiansRepository {
     suspend fun getAmphibianData(): List<Amphibians>
 }
 
-class NetworkAmphibian(private val amphibianApiService: AmphibianApiService): AmphibiansRepository{
+class NetworkAmphibianRepository(private val amphibianApiService: AmphibianApiService): AmphibiansRepository{
     override suspend fun getAmphibianData(): List<Amphibians>{
     return amphibianApiService.getAmphibians()
     }
